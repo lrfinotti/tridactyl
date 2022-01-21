@@ -107,5 +107,5 @@ bind --mode=ex <C-b> text.backward_char
 bind --mode=ex <C-a> text.beginning_of_line
 bind --mode=ex <C-e> text.end_of_line
 
-" Functions -- needs to be updated with commits!
-command update-config source --url https://raw.githubusercontent.com/lrfinotti/dotfiles/main/tridactyl/.tridactyl?token=GHSAT0AAAAAABQ2BVUUWPR7QSAI5D44TGI4YPLC5FQ
+" Functions
+command update-config source --url https://raw.githubusercontent.com/lrfinotti/tridactyl/main/.tridactyl
