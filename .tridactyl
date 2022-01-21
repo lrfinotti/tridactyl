@@ -20,6 +20,7 @@ set homepages ["web.math.utk.edu/~finotti"]
 
 " blacklists
 blacklistadd calendar.google.com
+blacklistadd youtube.com
 
 " Searches
 set searchurls.wiki https://en.wikipedia.org/wiki/Special:Search?search=
