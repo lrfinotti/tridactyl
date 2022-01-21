@@ -1,0 +1,111 @@
+" my custom tridatyl config
+" references:
+" https://github.com/jumper047/tridactyl_emacs_config/blob/main/emacs_bindings
+" https://github.com/tridactyl/tridactyl/blob/master/.tridactylrc
+
+" clean all previous configurations
+sanitise tridactyllocal
+
+" select color theme
+colors midnight
+
+" Unbind some keys
+unbind <C-f>
+unbind <C-b>
+" unbind >>
+" unbind <<
+
+" home page
+set homepages ["web.math.utk.edu/~finotti"]
+
+" blacklists
+blacklistadd calendar.google.com
+
+" Searches
+set searchurls.wiki https://en.wikipedia.org/wiki/Special:Search?search=
+set searchurls.gb https://www.google.com.br/search?q=
+set searchurls.ddg https://duckduckgo.com/?q=
+set searchurls.yt https://www.youtube.com/search?q=
+
+" Only hint search results on Google and DDG
+bindurl www.google.com f hint -Jc #search div:not(.action-menu) > a
+bindurl www.google.com F hint -Jbc #search div:not(.action-menu) > a
+bindurl ^https://duckduckgo.com f hint -Jc [class~=result__a]
+bindurl ^https://duckduckgo.com F hint -Jbc [class~=result__a]
+
+" binds
+" tabs
+bind --mode=normal } tabnext
+bind --mode=normal { tabprev
+" ignore toggle
+bind --mode=normal ` mode ignore
+bind --mode=ignore ` mode normal
+" zoom
+bind --mode=normal = zoom 0.1 true
+bind --mode=normal - zoom -0.1 true
+bind --mode=normal 0 zoom 1
+" detach tab
+bind gd tabdetach
+
+" """"""""""""""""""""""""""""""""""" "
+" Keys (Emacs and others)
+
+" Unbind C-g
+unbind <C-g>
+
+" C-g as in Emacs
+bind --mode=browser <C-g> escapehatch
+bind --mode=hint <C-g> hint.reset
+bind --mode=visual <C-g> composite js document.getSelection().empty(); mode normal; hidecmdline
+bind --mode=insert <C-g> composite unfocus | mode normal
+bind --mode=ex <C-g> ex.hide_and_clear
+
+" Alt-x
+bind <A-x> fillcmdline_notrail
+
+" Textfields
+bind --mode=insert <C-d> text.delete_char
+bind --mode=insert <C-t> text.transpose_char
+" bind --mode=insert <A-t> text.transpose_words
+" bind --mode=insert <A-u> text.upcase_word
+" bind --mode=insert <A-l> text.downcase_word
+" bind --mode=insert <A-c> text.capitalize_word
+bind --mode=insert <C-k> text.kill_line
+" bind --mode=insert <A-0><C-k> text.backward_kill_line
+" bind --mode=insert <C-u>0<C-k> text.backward_kill_line
+bind --mode=insert <CS-Backspace> text.kill_whole_line
+bind --mode=insert <A-d> text.kill_word
+bind --mode=insert <A-Backspace> text.backward_kill_word
+bind --mode=insert <C-a> text.beginning_of_line
+bind --mode=insert <C-e> text.end_of_line
+bind --mode=insert <C-f> text.forward_char
+bind --mode=insert <C-b> text.backward_char
+bind --mode=insert <A-f> text.forward_word
+bind --mode=insert <A-b> text.backward_word
+bind --mode=insert <C-y> text.insert_text
+
+
+" Selection
+bind <C-Space> hint -h
+" bind --mode=visual <C-g> composite js document.getSelection().empty(); mode normal; hidecmdline
+bind --mode=visual <C-n> js document.getSelection().modify("extend","forward","line")
+bind --mode=visual <C-p> js document.getSelection().modify("extend","backward","line")
+bind --mode=visual <C-b> js document.getSelection().modify("extend","backward","character")
+bind --mode=visual <C-f> js document.getSelection().modify("extend","forward","character")
+bind --mode=visual <A-f> js document.getSelection().modify("extend","forward","word")
+bind --mode=visual <A-b> js document.getSelection().modify("extend","backward","character"); document.getSelection().modify("extend","backward","word"); document.getSelection().modify("extend","forward","character")
+bind --mode=visual <A-w> composite js document.getSelection().toString() | clipboard yank
+
+" Commands
+bind --mode=ex <C-n> ex.next_completion
+bind --mode=ex <C-p> ex.prev_completion
+bind --mode=ex <A-n> ex.next_history
+bind --mode=ex <A-p> ex.prev_history
+bind --mode=ex <C-g> ex.hide_and_clear
+bind --mode=ex <C-f> text.forward_char
+bind --mode=ex <C-b> text.backward_char
+bind --mode=ex <C-a> text.beginning_of_line
+bind --mode=ex <C-e> text.end_of_line
+
+" Functions -- needs to be updated with commits!
+command update-config source --url https://raw.githubusercontent.com/lrfinotti/dotfiles/main/tridactyl/.tridactyl?token=GHSAT0AAAAAABQ2BVUUWPR7QSAI5D44TGI4YPLC5FQ
