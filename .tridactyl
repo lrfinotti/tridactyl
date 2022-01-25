@@ -19,6 +19,7 @@ set homepages ["https://luisfinotti.org/dokuwiki/doku.php?id=bookmarks"]
 " Unbind some keys
 unbind <C-f>
 unbind <C-b>
+unbind F
 " unbind >>
 " unbind <<
 
@@ -52,8 +53,9 @@ bind --mode=normal 0 zoom 1
 " detach tab
 bind gd tabdetach
 " hint only list items (for Dokuwik)
-bind --mode=normal i hint -c [class=li]
-
+bind --mode=normal i hint -tc [class=li]
+" F opens in FOREGROUND new tab
+bind --mode=normal hint -t
 
 " """"""""""""""""""""""""""""""""""" "
 " Keys (Emacs and others)
