@@ -55,7 +55,7 @@ bind gd tabdetach
 " hint only list items (for Dokuwik)
 bind --mode=normal i hint -tc [class=li]
 " F opens in FOREGROUND new tab
-bind --mode=normal hint -t
+bind --mode=normal F hint -t
 
 " """"""""""""""""""""""""""""""""""" "
 " Keys (Emacs and others)
