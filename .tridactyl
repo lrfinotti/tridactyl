@@ -39,6 +39,7 @@ bindurl www.google.com F hint -Jbc #search div:not(.action-menu) > a
 bindurl ^https://duckduckgo.com f hint -Jc [class~=result__a]
 bindurl ^https://duckduckgo.com F hint -Jbc [class~=result__a]
 
+
 " bindings
 " tabs
 bind --mode=normal } tabnext
@@ -53,7 +54,8 @@ bind --mode=normal 0 zoom 1
 " detach tab
 bind gd tabdetach
 " hint only list items (for Dokuwik)
-bind --mode=normal i hint -tc [class=li]
+bind --mode=normal i hint -c .li > a
+bind --mode=normal I hint -ct .li > a
 " F opens in FOREGROUND new tab
 bind --mode=normal F hint -t
 
