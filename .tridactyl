@@ -10,14 +10,17 @@ sanitise tridactyllocal
 " select color theme
 colors midnight
 
+" new tab landing page
+set newtab https://luisfinotti.org/dokuwiki/doku.php?id=bookmarks
+
+" home page
+set homepages ["https://luisfinotti.org/dokuwiki/doku.php?id=bookmarks"]
+
 " Unbind some keys
 unbind <C-f>
 unbind <C-b>
 " unbind >>
 " unbind <<
-
-" home page
-set homepages ["web.math.utk.edu/~finotti"]
 
 " blacklists
 blacklistadd calendar.google.com
@@ -35,7 +38,7 @@ bindurl www.google.com F hint -Jbc #search div:not(.action-menu) > a
 bindurl ^https://duckduckgo.com f hint -Jc [class~=result__a]
 bindurl ^https://duckduckgo.com F hint -Jbc [class~=result__a]
 
-" binds
+" bindings
 " tabs
 bind --mode=normal } tabnext
 bind --mode=normal { tabprev
@@ -48,6 +51,9 @@ bind --mode=normal - zoom -0.1 true
 bind --mode=normal 0 zoom 1
 " detach tab
 bind gd tabdetach
+" hint only list items (for Dokuwik)
+bind --mode=normal i hint -c [class=li]
+
 
 " """"""""""""""""""""""""""""""""""" "
 " Keys (Emacs and others)
@@ -100,7 +106,9 @@ bind --mode=visual <A-w> composite js document.getSelection().toString() | clipb
 
 " Commands
 bind --mode=ex <C-n> ex.next_completion
+bind --mode=ex <ArrowDown> ex.next_completion
 bind --mode=ex <C-p> ex.prev_completion
+bind --mode=ex <ArrowUp> ex.prev_completion
 bind --mode=ex <A-n> ex.next_history
 bind --mode=ex <A-p> ex.prev_history
 bind --mode=ex <C-g> ex.hide_and_clear
