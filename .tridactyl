@@ -26,6 +26,7 @@ unbind F
 " blacklists
 blacklistadd calendar.google.com
 blacklistadd youtube.com
+blacklistadd outlook.office.com
 
 " Searches
 set searchurls.wiki https://en.wikipedia.org/wiki/Special:Search?search=
