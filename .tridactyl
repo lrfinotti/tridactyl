@@ -20,8 +20,27 @@ set homepages ["https://luisfinotti.org/dokuwiki/doku.php?id=bookmarks"]
 unbind <C-f>
 unbind <C-b>
 unbind F
-" unbind >>
-" unbind <<
+unbind <C-g>
+unbind h
+unbind l
+unbind j
+unbind k
+unbind H
+unbind L
+unbind J
+unbind K
+unbind a
+unbind q
+unbind qa
+unbind zi
+unbind zI
+unbind zm
+unbind zM
+unbind zo
+unbind zO
+unbind zr
+unbind zR
+unbind zz
 
 " blacklists
 blacklistadd calendar.google.com
@@ -30,7 +49,7 @@ blacklistadd outlook.office.com
 blacklistadd cocalc.com
 
 " Searches
-set searchurls.wiki https://en.wikipedia.org/wiki/Special:Search?search=
+set searchurls.w https://en.wikipedia.org/wiki/Special:Search?search=
 set searchurls.gb https://www.google.com.br/search?q=
 set searchurls.ddg https://duckduckgo.com/?q=
 set searchurls.yt https://www.youtube.com/search?q=
@@ -41,31 +60,46 @@ bindurl www.google.com F hint -Jbc #search div:not(.action-menu) > a
 bindurl ^https://duckduckgo.com f hint -Jc [class~=result__a]
 bindurl ^https://duckduckgo.com F hint -Jbc [class~=result__a]
 
-
+" """"""""""""""""""""""""""""""""""" "
 " bindings
+
+" navigation
+bind --mode=normal ] forward
+bind --mode=normal [ back
+bind --mode=normal a scrollline -10
+bind --mode=normal z scrollline 10
+
 " tabs
 bind --mode=normal } tabnext
 bind --mode=normal { tabprev
+
 " ignore toggle
 bind --mode=normal ` mode ignore
 bind --mode=ignore ` mode normal
+
 " zoom
 bind --mode=normal = zoom 0.1 true
 bind --mode=normal - zoom -0.1 true
 bind --mode=normal 0 zoom 1
+
 " detach tab
 bind gd tabdetach
+
 " hint only list items (for Dokuwik)
 bind --mode=normal i hint -c .li > a
 bind --mode=normal I hint -ct .li > a
+
 " F opens in FOREGROUND new tab
 bind --mode=normal F hint -t
+
+" Q for closeall
+bind --mode=normal Q qall
 
 " """"""""""""""""""""""""""""""""""" "
 " Keys (Emacs and others)
 
-" Unbind C-g
-unbind <C-g>
+" Unbind C-g  (Alredy done!)
+" unbind <C-g>
 
 " C-g as in Emacs
 bind --mode=browser <C-g> escapehatch
@@ -80,48 +114,61 @@ bind <A-x> fillcmdline_notrail
 " Textfields
 bind --mode=insert <C-d> text.delete_char
 bind --mode=insert <C-t> text.transpose_char
-" bind --mode=insert <A-t> text.transpose_words
-" bind --mode=insert <A-u> text.upcase_word
-" bind --mode=insert <A-l> text.downcase_word
-" bind --mode=insert <A-c> text.capitalize_word
 bind --mode=insert <C-k> text.kill_line
-" bind --mode=insert <A-0><C-k> text.backward_kill_line
-" bind --mode=insert <C-u>0<C-k> text.backward_kill_line
 bind --mode=insert <CS-Backspace> text.kill_whole_line
-bind --mode=insert <A-d> text.kill_word
 bind --mode=insert <A-Backspace> text.backward_kill_word
 bind --mode=insert <C-a> text.beginning_of_line
 bind --mode=insert <C-e> text.end_of_line
 bind --mode=insert <C-f> text.forward_char
 bind --mode=insert <C-b> text.backward_char
-bind --mode=insert <A-f> text.forward_word
-bind --mode=insert <A-b> text.backward_word
-bind --mode=insert <C-y> text.insert_text
+bind --mode=insert <CA-ArrorRight> text.forward_word
+bind --mode=insert <CA-ArrowLeft> text.backward_word
+" bind --mode=insert <C-y> text.insert_text
+" bind --mode=insert <A-d> text.kill_word
+" bind --mode=insert <A-t> text.transpose_words
+" bind --mode=insert <A-u> text.upcase_word
+" bind --mode=insert <A-l> text.downcase_word
+" bind --mode=insert <A-c> text.capitalize_word
+" bind --mode=insert <A-0><C-k> text.backward_kill_line
+" bind --mode=insert <C-u>0<C-k> text.backward_kill_line
 
 
 " Selection
 bind <C-Space> hint -h
 " bind --mode=visual <C-g> composite js document.getSelection().empty(); mode normal; hidecmdline
-bind --mode=visual <C-n> js document.getSelection().modify("extend","forward","line")
-bind --mode=visual <C-p> js document.getSelection().modify("extend","backward","line")
-bind --mode=visual <C-b> js document.getSelection().modify("extend","backward","character")
-bind --mode=visual <C-f> js document.getSelection().modify("extend","forward","character")
-bind --mode=visual <A-f> js document.getSelection().modify("extend","forward","word")
-bind --mode=visual <A-b> js document.getSelection().modify("extend","backward","character"); document.getSelection().modify("extend","backward","word"); document.getSelection().modify("extend","forward","character")
+bind --mode=visual <ArrowDown> js document.getSelection().modify("extend","forward","line")
+bind --mode=visual <ArrowUp> js document.getSelection().modify("extend","backward","line")
+bind --mode=visual <ArrowLeft> js document.getSelection().modify("extend","backward","character")
+bind --mode=visual <ArrowRight> js document.getSelection().modify("extend","forward","character")
+bind --mode=visual <A-ArrowRight> js document.getSelection().modify("extend","forward","word")
+bind --mode=visual <A-ArrowLeft> js document.getSelection().modify("extend","backward","character"); document.getSelection().modify("extend","backward","word"); document.getSelection().modify("extend","backward","character")
 bind --mode=visual <A-w> composite js document.getSelection().toString() | clipboard yank
+" bind --mode=visual <C-n> js document.getSelection().modify("extend","forward","line")
+" bind --mode=visual <C-p> js document.getSelection().modify("extend","backward","line")
+" bind --mode=visual <C-b> js document.getSelection().modify("extend","backward","character")
+" bind --mode=visual <C-f> js document.getSelection().modify("extend","forward","character")
+" bind --mode=visual <A-f> js document.getSelection().modify("extend","forward","word")
+" bind --mode=visual <A-b> js document.getSelection().modify("extend","backward","character"); document.getSelection().modify("extend","backward","word"); document.getSelection().modify("extend","forward","character")
+
 
 " Commands
-bind --mode=ex <C-n> ex.next_completion
 bind --mode=ex <ArrowDown> ex.next_completion
-bind --mode=ex <C-p> ex.prev_completion
 bind --mode=ex <ArrowUp> ex.prev_completion
-bind --mode=ex <A-n> ex.next_history
-bind --mode=ex <A-p> ex.prev_history
+bind --mode=ex <A-ArrowDown> ex.next_history
+bind --mode=ex <A-ArrowUp> ex.prev_history
 bind --mode=ex <C-g> ex.hide_and_clear
 bind --mode=ex <C-f> text.forward_char
 bind --mode=ex <C-b> text.backward_char
 bind --mode=ex <C-a> text.beginning_of_line
 bind --mode=ex <C-e> text.end_of_line
+bind --mode=ex <C-k> text.kill_line
+bind --mode=ex <CS-Backspace> text.kill_whole_line
+bind --mode=ex <A-Backspace> text.backward_kill_word
+" bind --mode=ex <C-n> ex.next_completion
+" bind --mode=ex <C-p> ex.prev_completion
+" bind --mode=ex <A-n> ex.next_history
+" bind --mode=ex <A-p> ex.prev_history
 
 " Functions
 command update-config source --url https://raw.githubusercontent.com/lrfinotti/tridactyl/main/.tridactyl
+command w open w
