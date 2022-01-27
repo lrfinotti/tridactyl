@@ -113,7 +113,7 @@ bind <A-x> fillcmdline_notrail
 
 " Textfields
 bind --mode=insert <C-d> text.delete_char
-bind --mode=insert <C-t> text.transpose_char
+" bind --mode=insert <C-t> text.transpose_char
 bind --mode=insert <C-k> text.kill_line
 bind --mode=insert <CS-Backspace> text.kill_whole_line
 bind --mode=insert <A-Backspace> text.backward_kill_word
@@ -121,7 +121,7 @@ bind --mode=insert <C-a> text.beginning_of_line
 bind --mode=insert <C-e> text.end_of_line
 bind --mode=insert <C-f> text.forward_char
 bind --mode=insert <C-b> text.backward_char
-bind --mode=insert <CA-ArrorRight> text.forward_word
+bind --mode=insert <CA-ArrowRight> text.forward_word
 bind --mode=insert <CA-ArrowLeft> text.backward_word
 " bind --mode=insert <C-y> text.insert_text
 " bind --mode=insert <A-d> text.kill_word
