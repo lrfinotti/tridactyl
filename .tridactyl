@@ -59,6 +59,8 @@ bindurl www.google.com f hint -Jc #search div:not(.action-menu) > a
 bindurl www.google.com F hint -Jbc #search div:not(.action-menu) > a
 bindurl ^https://duckduckgo.com f hint -Jc [class~=result__a]
 bindurl ^https://duckduckgo.com F hint -Jbc [class~=result__a]
+bindurl linuxmusicians.com f hint -c .topictitle, .forumtitle, .row-item-link
+bindurl linuxmusicians.com F hint -tc .topictitle, .forumtitle, .row-item-link
 
 " """"""""""""""""""""""""""""""""""" "
 " bindings
@@ -66,8 +68,8 @@ bindurl ^https://duckduckgo.com F hint -Jbc [class~=result__a]
 " navigation
 bind --mode=normal ] forward
 bind --mode=normal [ back
-bind --mode=normal a scrollline -10
-bind --mode=normal z scrollline 10
+bind --mode=normal a scrollpage -1
+bind --mode=normal z scrolpage 1
 
 " tabs
 bind --mode=normal } tabnext
@@ -172,3 +174,5 @@ bind --mode=ex <A-Backspace> text.backward_kill_word
 " Functions
 command update-config source --url https://raw.githubusercontent.com/lrfinotti/tridactyl/main/.tridactyl
 command w open w
+command f hint -f
+command F hint -tf
