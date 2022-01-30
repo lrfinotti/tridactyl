@@ -54,13 +54,20 @@ set searchurls.gb https://www.google.com.br/search?q=
 set searchurls.ddg https://duckduckgo.com/?q=
 set searchurls.yt https://www.youtube.com/search?q=
 
-" Only hint search results on Google and DDG
+" Site specific
 bindurl www.google.com f hint -Jc #search div:not(.action-menu) > a
 bindurl www.google.com F hint -Jbc #search div:not(.action-menu) > a
+
 bindurl ^https://duckduckgo.com f hint -Jc [class~=result__a]
 bindurl ^https://duckduckgo.com F hint -Jbc [class~=result__a]
+
 bindurl linuxmusicians.com f hint -c .topictitle, .forumtitle, .row-item-link
 bindurl linuxmusicians.com F hint -tc .topictitle, .forumtitle, .row-item-link
+
+bindurl https://forum.siduction.org/index.php f hint -c .subject, .children > a, .new_posts
+bindurl https://forum.siduction.org/index.php F hint -tc .subject, .children > a, .new_posts
+bindurl ^https://forum.siduction.org/index.php?board= f hint -c [class=info] > [class=subject], [id^=msg] > a, [id^=newicon]
+bindurl ^https://forum.siduction.org/index.php?board= F hint -tc [class=info] > [class=subject], [id^=msg] > a, [id^=newicon]
 
 " """"""""""""""""""""""""""""""""""" "
 " bindings
