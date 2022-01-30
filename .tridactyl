@@ -64,10 +64,8 @@ bindurl ^https://duckduckgo.com F hint -Jbc [class~=result__a]
 bindurl linuxmusicians.com f hint -c .topictitle, .forumtitle, .row-item-link
 bindurl linuxmusicians.com F hint -tc .topictitle, .forumtitle, .row-item-link
 
-bindurl https://forum.siduction.org/index.php f hint -c .subject, .children > a, .new_posts
-bindurl https://forum.siduction.org/index.php F hint -tc .subject, .children > a, .new_posts
-bindurl ^https://forum.siduction.org/index.php?board= f hint -c [class=info] > [class=subject], [id^=msg] > a, [id^=newicon]
-bindurl ^https://forum.siduction.org/index.php?board= F hint -tc [class=info] > [class=subject], [id^=msg] > a, [id^=newicon]
+bindurl https://forum.siduction.org/index.php f hint -c .children > a, .new_posts, [class=info] > [class=subject], [id^=msg] > a, [id^=newicon]
+bindurl https://forum.siduction.org/index.php F hint -tc .children > a, .new_posts, [class=info] > [class=subject], [id^=msg] > a, [id^=newicon]
 
 " """"""""""""""""""""""""""""""""""" "
 " bindings
