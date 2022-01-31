@@ -75,7 +75,7 @@ bindurl https://forum.siduction.org/index.php F hint -tc .children > a, .new_pos
 bind --mode=normal ] forward
 bind --mode=normal [ back
 bind --mode=normal a scrollpage -1
-bind --mode=normal z scrolpage 1
+bind --mode=normal z scrollpage 1
 
 " tabs
 bind --mode=normal } tabnext
