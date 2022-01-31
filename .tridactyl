@@ -47,6 +47,7 @@ blacklistadd calendar.google.com
 blacklistadd youtube.com
 blacklistadd outlook.office.com
 blacklistadd cocalc.com
+blacklistadd artofproblemsolving.com
 
 " Searches
 set searchurls.w https://en.wikipedia.org/wiki/Special:Search?search=
