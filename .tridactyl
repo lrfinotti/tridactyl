@@ -74,6 +74,10 @@ bindurl forum.siduction.org I hint -tc .children > a, .new_posts, [class=info] >
 bindurl discourse.ardour.org i hint -c .title
 bindurl discourse.ardour.org I hint -tc .title
 
+" the J option here was key!  (Disable java-script)
+bindurl slashdot.org i hint -Jc [class="story-title"] > a, [id^="text-"] > a
+bindurl slashdot.org I hint -tJc [class="story-title"] > a, [id^="text-"] > a
+
 " """"""""""""""""""""""""""""""""""" "
 " bindings
 
