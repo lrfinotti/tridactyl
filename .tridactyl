@@ -68,8 +68,8 @@ bindurl https://luisfinotti.org/dokuwiki/ I hint -tc .li > a
 bindurl linuxmusicians.com i hint -c .topictitle, .forumtitle, .row-item-link
 bindurl linuxmusicians.com I hint -tc .topictitle, .forumtitle, .row-item-link
 
-bindurl forum.siduction.org/index.php i hint -c .children > a, .new_posts, [class=info] > [class=subject], [id^=msg] > a, [id^=newicon]
-bindurl forum.siduction.org/index.php I hint -tc .children > a, .new_posts, [class=info] > [class=subject], [id^=msg] > a, [id^=newicon]
+bindurl forum.siduction.org i hint -c .children > a, .new_posts, [class=info] > [class=subject], [id^=msg] > a, [id^=newicon], [href="https://forum.siduction.org/index.php?action=unread;all;start=0"], [href="https://forum.siduction.org/index.php?action=recent"], .topic_details > h5 > a
+bindurl forum.siduction.org I hint -tc .children > a, .new_posts, [class=info] > [class=subject], [id^=msg] > a, [id^=newicon], [href="https://forum.siduction.org/index.php?action=unread;all;start=0"], [href="https://forum.siduction.org/index.php?action=recent"], .topic_details > h5 > a
 
 bindurl discourse.ardour.org i hint -c .title
 bindurl discourse.ardour.org I hint -tc .title
