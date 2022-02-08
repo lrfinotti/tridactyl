@@ -10,6 +10,9 @@ sanitise tridactyllocal
 " select color theme
 colors midnight
 
+" open tab after current
+set tabopenpos related
+
 " new tab landing page
 set newtab https://luisfinotti.org/dokuwiki/doku.php?id=bookmarks
 
