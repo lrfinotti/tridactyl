@@ -191,3 +191,24 @@ command update-config source --url https://raw.githubusercontent.com/lrfinotti/t
 command w open w
 command f hint -f
 command F hint -tf
+
+" Bookmarks
+quickmark a https://discourse.ardour.org/
+quickmark A https://smile.amazon.com/
+quickmark b https://luisfinotti.org/dokuwiki/doku.php?id=bookmarks
+quickmark c https://utk.instructure.com/
+quicmakrk e https://edstem.org/us/dashboard/
+quickmark f https://www.folha.uol.com.br/
+quickmark g https://www.google.com/
+quickmark i https://luisfinotti.org/dokuwiki/doku.php?id=index
+quickmark m https://www.google.com/maps/
+quickmark M https://www.math.utk.edu/
+quickmark n https://news.google.com/
+quickmark s https://slashdot.org/
+quickmark S https://forum.siduction.org/
+quickmark t https://todoist.com/app/project/2222901143
+quickmark T https://todoist.com/app/project/2222901145
+quickmark u https://myutk.utk.edu/
+quickmark U https://www.utk.edu/
+quickmark x https://forum.xda-developers.com/watched/threads
+quickmark y https://www.youtube.com/
