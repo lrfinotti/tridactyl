@@ -11,7 +11,7 @@ sanitise tridactyllocal
 colors midnight
 
 " open tab after current
-set tabopenpos related
+set tabopenpos last
 
 " new tab landing page
 set newtab https://luisfinotti.org/dokuwiki/doku.php?id=bookmarks
