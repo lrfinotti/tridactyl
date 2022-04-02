@@ -10,7 +10,7 @@ sanitise tridactyllocal
 " select color theme
 colors midnight
 
-" open tab after current
+" open tab after current: relative
 set tabopenpos last
 
 " new tab landing page
