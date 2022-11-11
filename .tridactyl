@@ -51,6 +51,12 @@ blacklistadd youtube.com
 blacklistadd outlook.office.com
 blacklistadd cocalc.com
 blacklistadd artofproblemsolving.com
+blacklistadd hbomax.com
+blacklistadd netflix.com
+blacklistadd hulu.com
+blacklistadd peacocktv.com
+blacklistadd disneyplus.com
+
 
 " Searches
 set searchurls.w https://en.wikipedia.org/wiki/Special:Search?search=
