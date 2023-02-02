@@ -51,12 +51,8 @@ blacklistadd youtube.com
 blacklistadd outlook.office.com
 blacklistadd cocalc.com
 blacklistadd artofproblemsolving.com
-blacklistadd hbomax.com
-blacklistadd netflix.com
-blacklistadd hulu.com
-blacklistadd peacocktv.com
-blacklistadd disneyplus.com
-
+blacklistadd todoist.com
+blacklistadd edstem.org
 
 " Searches
 set searchurls.w https://en.wikipedia.org/wiki/Special:Search?search=
@@ -200,7 +196,7 @@ command F hint -tf
 
 " Bookmarks
 quickmark a https://discourse.ardour.org/
-quickmark A https://smile.amazon.com/
+quickmark A https://amazon.com/
 quickmark b https://luisfinotti.org/dokuwiki/doku.php?id=bookmarks
 quickmark c https://utk.instructure.com/
 quickmark e https://edstem.org/us/dashboard/
