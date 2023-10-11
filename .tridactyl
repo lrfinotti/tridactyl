@@ -14,12 +14,14 @@ colors midnight
 set tabopenpos last
 
 " new tab landing page
-set newtab https://luisfinotti.org/dokuwiki/doku.php?id=bookmarks
+" set newtab https://luisfinotti.org/dokuwiki/doku.php?id=bookmarks
 " set newtab file:///home/finotti/GD/InSync/bookmarks/bookmarks.html
+set newtab https://web.math.utk.edu/~finotti/bookmarks/
 
 " home page
-set homepages ["https://luisfinotti.org/dokuwiki/doku.php?id=bookmarks"]
+" set homepages ["https://luisfinotti.org/dokuwiki/doku.php?id=bookmarks"]
 " set homepages ["file:///home/finotti/GD/InSync/bookmarks/bookmarks.html"]
+set homepages ["https://web.math.utk.edu/~finotti/bookmarks/"]
 
 " Unbind some keys
 unbind <C-f>
