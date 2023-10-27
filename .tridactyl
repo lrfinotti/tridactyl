@@ -67,6 +67,8 @@ set searchurls.yt https://www.youtube.com/search?q=
 " Site specific
 " bindurl www.google.com f hint -Jc #search div:not(.action-menu) > a
 " bindurl www.google.com F hint -Jbc #search div:not(.action-menu) > a
+bindurl www.google.com f hint -Jc #search a
+bindurl www.google.com F hint -Jbc #search a
 
 " bindurl ^https://duckduckgo.com f hint -Jc [class~=result__a]
 " bindurl ^https://duckduckgo.com F hint -Jbc [class~=result__a]
