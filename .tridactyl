@@ -16,12 +16,14 @@ set tabopenpos last
 " new tab landing page
 " set newtab https://luisfinotti.org/dokuwiki/doku.php?id=bookmarks
 " set newtab file:///home/finotti/GD/InSync/bookmarks/bookmarks.html
-set newtab https://web.math.utk.edu/~finotti/bookmarks/
+" set newtab https://web.math.utk.edu/~finotti/bookmarks/
+set newtab https://https://finotti.a2hosted.com/dokuwiki/doku.php?id=bookmarks
 
 " home page
 " set homepages ["https://luisfinotti.org/dokuwiki/doku.php?id=bookmarks"]
 " set homepages ["file:///home/finotti/GD/InSync/bookmarks/bookmarks.html"]
-set homepages ["https://web.math.utk.edu/~finotti/bookmarks/"]
+" set homepages ["https://web.math.utk.edu/~finotti/bookmarks/"]
+set homepages ["https://https://finotti.a2hosted.com/dokuwiki/doku.php?id=bookmarks"]
 
 " Unbind some keys
 unbind <C-f>
@@ -73,8 +75,12 @@ bindurl www.google.com F hint -Jbc #search a
 " bindurl ^https://duckduckgo.com f hint -Jc [class~=result__a]
 " bindurl ^https://duckduckgo.com F hint -Jbc [class~=result__a]
 
-bindurl https://luisfinotti.org/dokuwiki/ i hint -c .li > a
-bindurl https://luisfinotti.org/dokuwiki/ I hint -tc .li > a
+" bindurl https://luisfinotti.org/dokuwiki/ i hint -c .li > a
+" bindurl https://luisfinotti.org/dokuwiki/ I hint -tc .li > a
+bindurl https://finotti.a2hosted.com/dokuwiki/ i hint -c .li > a
+bindurl https://finotti.a2hosted.com/dokuwiki/ I hint -tc .li > a
+
+
 
 bindurl linuxmusicians.com i hint -c .topictitle, .forumtitle, .row-item-link, .mark
 bindurl linuxmusicians.com I hint -tc .topictitle, .forumtitle, .row-item-link, .mark
@@ -204,15 +210,18 @@ command F hint -tf
 " Bookmarks
 quickmark a https://discourse.ardour.org/
 quickmark A https://amazon.com/
-quickmark b https://luisfinotti.org/dokuwiki/doku.php?id=bookmarks
+" quickmark b https://luisfinotti.org/dokuwiki/doku.php?id=bookmarks
+quickmark b https://finotti.a2hosted.com/dokuwiki/doku.php?id=bookmarks
 quickmark c https://utk.instructure.com/
 quickmark e https://edstem.org/us/dashboard/
 quickmark f https://www.folha.uol.com.br/
 quickmark g https://www.google.com/
 quickmark h http://web.math.utk.edu/~finotti
-quickmark i https://luisfinotti.org/dokuwiki/doku.php?id=index
+" quickmark i https://luisfinotti.org/dokuwiki/doku.php?id=index
+quickmark i https://finotti.a2hosted.com/dokuwiki/doku.php?id=index
 quickmark l https://linuxmusicians.com/
-quickmark L https://luisfinotti.org/
+" quickmark L https://luisfinotti.org/
+quickmark L https://finotti.a2hosted.com/
 quickmark m https://www.google.com/maps/
 quickmark M https://www.math.utk.edu/
 quickmark n https://news.google.com/
