@@ -17,13 +17,13 @@ set tabopenpos last
 " set newtab https://luisfinotti.org/dokuwiki/doku.php?id=bookmarks
 " set newtab file:///home/finotti/GD/InSync/bookmarks/bookmarks.html
 " set newtab https://web.math.utk.edu/~finotti/bookmarks/
-set newtab https://https://finotti.a2hosted.com/dokuwiki/doku.php?id=bookmarks
+set newtab https://finotti.a2hosted.com/dokuwiki/doku.php?id=bookmarks
 
 " home page
 " set homepages ["https://luisfinotti.org/dokuwiki/doku.php?id=bookmarks"]
 " set homepages ["file:///home/finotti/GD/InSync/bookmarks/bookmarks.html"]
 " set homepages ["https://web.math.utk.edu/~finotti/bookmarks/"]
-set homepages ["https://https://finotti.a2hosted.com/dokuwiki/doku.php?id=bookmarks"]
+set homepages ["https://finotti.a2hosted.com/dokuwiki/doku.php?id=bookmarks"]
 
 " Unbind some keys
 unbind <C-f>
