@@ -14,9 +14,9 @@ colors midnight
 set tabopenpos last
 
 " new tab landing page
-" set newtab https://luisfinotti.org/dokuwiki/doku.php?id=bookmarks
+set newtab https://luisfinotti.org/dokuwiki/doku.php?id=bookmarks
 " set newtab file:///home/finotti/GD/InSync/bookmarks/bookmarks.html
-set newtab https://web.math.utk.edu/~finotti/bookmarks/
+" set newtab https://web.math.utk.edu/~finotti/bookmarks/
 " set newtab https://finotti.a2hosted.com/dokuwiki/doku.php?id=bookmarks
 
 " home page
