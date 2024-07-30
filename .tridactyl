@@ -59,6 +59,8 @@ blacklistadd cocalc.com
 blacklistadd artofproblemsolving.com
 blacklistadd todoist.com
 blacklistadd edstem.org
+blacklistadd moodle.loveofmath.com
+blacklistadd utk.instructure.com
 
 " Searches
 set searchurls.w https://en.wikipedia.org/wiki/Special:Search?search=
