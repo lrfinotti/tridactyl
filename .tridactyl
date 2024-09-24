@@ -61,6 +61,7 @@ blacklistadd todoist.com
 blacklistadd edstem.org
 blacklistadd moodle.loveofmath.com
 blacklistadd utk.instructure.com
+blacklistadd gradescope.com
 
 " Searches
 set searchurls.w https://en.wikipedia.org/wiki/Special:Search?search=
