@@ -68,6 +68,7 @@ set searchurls.w https://en.wikipedia.org/wiki/Special:Search?search=
 set searchurls.gb https://www.google.com.br/search?q=
 set searchurls.ddg https://duckduckgo.com/?q=
 set searchurls.yt https://www.youtube.com/search?q=
+set searchurls.n https://luisfinotti.org/dokuwiki/doku.php?do=search&q=
 
 " Site specific
 " bindurl www.google.com f hint -Jc #search div:not(.action-menu) > a
@@ -221,10 +222,8 @@ quickmark f https://www.folha.uol.com.br/
 quickmark g https://www.google.com/
 quickmark h http://web.math.utk.edu/~finotti
 quickmark i https://luisfinotti.org/dokuwiki/doku.php?id=index
-" quickmark i https://finotti.a2hosted.com/dokuwiki/doku.php?id=index
 quickmark l https://linuxmusicians.com/
 quickmark L https://luisfinotti.org/
-" quickmark L https://finotti.a2hosted.com/
 quickmark m https://www.google.com/maps/
 quickmark M https://www.math.utk.edu/
 quickmark n https://news.google.com/
