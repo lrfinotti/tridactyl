@@ -65,7 +65,8 @@ blacklistadd gradescope.com
 
 " Searches
 set searchurls.w https://en.wikipedia.org/wiki/Special:Search?search=
-set searchurls.gb https://www.google.com.br/search?q=
+" set searchurls.gb https://www.google.com.br/search?q=
+set searchurls.gb https://www.google.com/search?lr=lang_pt&cr=countryBR&as_q=
 set searchurls.ddg https://duckduckgo.com/?q=
 set searchurls.yt https://www.youtube.com/search?q=
 set searchurls.n https://luisfinotti.org/dokuwiki/doku.php?do=search&q=
